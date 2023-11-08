@@ -10,7 +10,7 @@ async function Navbar() {
     <nav className="flex justify-between items-center bg-gray-950 text-white px-24 py-3">
       <h1 className="text-xl font-bold">NextAuth</h1>
 
-      <ul className="flex gap-x-2">
+      <ul className="flex gap-x-4">
         <li>
           <Link href="/">Home</Link>
         </li>
@@ -27,6 +27,12 @@ async function Navbar() {
           <>
             <li>
               <Link href="/dashboard">Dashboard</Link>
+            </li>
+            <li>
+              <Link href="/dashboard/settings">Settigns</Link>
+            </li>
+            <li>
+              <Link href="/private">Private Zone</Link>
             </li>
             <li>
               <Link href="/api/auth/signout">Logout</Link>
