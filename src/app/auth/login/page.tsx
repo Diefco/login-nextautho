@@ -2,7 +2,7 @@
 
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
-import { SignInResponse, signIn } from "next-auth/react";
+import { signIn } from "next-auth/react";
 import { useState } from "react";
 
 type loginForm = {
@@ -34,6 +34,7 @@ function LoginPage() {
         setError(res.error);
       } else {
         router.push("/dashboard");
+        router.refresh();
       }
     } catch (error) {
       console.error(error);
